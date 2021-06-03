@@ -21,7 +21,7 @@
     </ul><br/>
 
     <div class="lgbackground container">
-        <h2>Tweets</h2>
+        <h2 class="Tweets">Tweets</h2>
         <div class = "list-group" th:each="tweet:${tweetList}">
             <div class="list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-between">
@@ -36,10 +36,10 @@
     </div>
 </div>
 <div th:if="${#lists.isEmpty(tweetList) and filter == 'all'}">
-    <h3>No tweets have been created yet</h3>
+    <h3 class="created">No tweets have been created yet</h3>
 </div>
 <div th:if="${#lists.isEmpty(tweetList) and filter == 'following'}">
-    <h3>No tweets have been created by your followers</h3>
+    <h3 class="noTweets">No tweets have been created by your followers</h3>
 </div>
 
 </body>
